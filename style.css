@@ -56,12 +56,10 @@ a {
 
 button {
   all: unset;
-  cursor: pointer;
 }
 
 .container {
   max-width: 1398px;
-  margin: 0 auto;
   padding: 0 15px;
   width: 100%;
 }
@@ -86,18 +84,18 @@ button {
 /* Navbar */
 /* ========== */
 
-.nav-btn > .primary-btn {
-  padding: 17px 30px;
+.last-nav-btn > .last-primary-btn {
+  padding: 17px 36px;
   background-color: var(--pink-color);
   color: var(--white-text);
   border-radius: 4px;
-  margin-left: 25px;
+  margin-left: 27px;
 }
 
 .navbar-collapsed,
 nav,
 .navbar-collapsed > ul,
-.nav-btn {
+.last-nav-btn {
   display: flex;
   align-items: center;
   font-family: var(--metropolis-semibold);
@@ -119,7 +117,6 @@ nav,
 }
 
 .navbar-collapsed {
-  justify-content: space-between;
   flex-grow: 1;
   letter-spacing: 2px;
   font-size: 12px;
@@ -129,9 +126,7 @@ nav,
   margin: 0 auto;
 }
 
-.header-sec {
-  position: relative;
-  top: 0;
+.header-section {
   background: #ffffff;
 }
 
@@ -141,10 +136,10 @@ nav,
 
 .banner-row {
   align-items: center;
-  flex-wrap: wrap-reverse;
+  /* flex-wrap: wrap-reverse; is it important? */
 }
 
-.banner-sec {
+.banner-section {
   margin: 15px 0;
 }
 
@@ -206,7 +201,7 @@ nav,
   margin-bottom: 38px;
 }
 
-.banner-sec h1 {
+.banner-section h1 {
   max-width: 435px;
   margin-bottom: 23px;
   font-family: var(--metropolis-black);
@@ -215,7 +210,7 @@ nav,
   color: var(--text-black);
 }
 
-.banner-sec p {
+.banner-section p {
   max-width: 392px;
   font-family: var(--metropolis-medium);
   font-size: 16px;
@@ -232,7 +227,7 @@ nav,
   margin-bottom: 51px;
 }
 
-.banner-btn > .primary-btn {
+.banner-btn > .last-primary-btn {
   padding: 13px 22.93px 13px 22.07px;
   background-color: var(--pink-color);
   color: var(--white-text);
@@ -260,21 +255,21 @@ nav,
   margin-right: 11px;
 }
 
-.v-line {
+.media-line {
   display: flex;
   align-items: center;
 }
 
-.v-line li {
+.media-line li {
   margin-right: 16px;
 }
 
-.v-line li:first-child {
+.media-line li:first-child {
   position: Relative;
   margin-right: calc(22.09px * 2);
 }
 
-.v-line li:first-child::after {
+.media-line li:first-child::after {
   content: "";
   width: 1px;
   background: var(--color-grey);
@@ -287,9 +282,9 @@ nav,
 /* ========== */
 /* card section */
 /* ========== */
-.card-sec,
-.our-services-sec,
-.best-results {
+.card-section,
+.our-services-section,
+.best-results-section {
   padding: 100px 0;
 }
 
@@ -309,19 +304,12 @@ nav,
 }
 .title-2 {
   font-size: 36px;
-  font-family: (var(--metropolis-bold));
+  font-family: var(--metropolis-bold);
 }
 
 .card-content,
 .results-card-content {
   margin-top: 18px;
-}
-
-.results-container {
-  max-width: 1394px;
-  margin: 0 auto;
-  padding: 0 15px;
-  width: 100%;
 }
 
 .content > h2 {
@@ -350,11 +338,6 @@ nav,
 .about-us-row {
   align-items: center;
 }
-
-/* .row {
-  row-gap: 55px;
-  margin: 0 auto;
-} */
 
 .col-3,
 .col-25 {
@@ -407,26 +390,17 @@ nav,
 }
 /* Best-results section */
 
-.best-results-sec {
-  padding: 100px;
-}
-
 .title-3 {
   color: var(--text-black);
   margin-bottom: 8px;
   max-width: 100%;
 }
 
-.title-3:hover {
-  color: var(--pink-color);
-  cursor: pointer;
-}
-
-.big {
+.word {
   font-size: 40px;
 }
 
-.small {
+.word-2 {
   font-size: 16px;
   margin-left: 4px;
 }
@@ -438,7 +412,7 @@ nav,
   letter-spacing: calc(35 / 21);
 }
 
-.title-3 > .big {
+.title-3 > .word {
   text-transform: uppercase;
 }
 
@@ -454,13 +428,13 @@ nav,
   max-width: 172px;
   margin: 0 auto 20px;
 }
-.bigg {
+.color-change {
   color: #ed017f;
   font-size: 40px;
   text-transform: uppercase;
 }
 
-.smalll {
+.color-change-2 {
   font-size: 16px;
   margin-left: 4px;
   color: #ed017f;
@@ -477,12 +451,12 @@ nav,
   margin-bottom: 20px;
 }
 
-.footer-social {
+.footer-media {
   display: flex;
   align-items: center;
 }
 
-.footer-social li {
+.footer-media li {
   margin-right: 16px;
 }
 
@@ -518,11 +492,8 @@ nav,
   color: var(--color-grey);
   text-transform: capitalize;
 }
-.footer-links:hover {
-  color: var(--primary-color);
-  border-bottom: 1px solid var(--pink-color);
-}
-.footer-sec {
+
+.footer-section {
   padding-top: 87px;
 }
 
@@ -555,7 +526,7 @@ nav,
   .home-btn {
     display: none;
   }
-  .banner-sec h1 {
+  .banner-section h1 {
     font-size: 32px;
   }
 
@@ -573,7 +544,7 @@ nav,
 }
 
 @media screen and (max-width: 700px) {
-  .best-results .col-3 {
+  .best-results, .col-3 {
     width: 50%;
   }
 
@@ -586,7 +557,7 @@ nav,
   .col-3 {
     width: 50%;
   }
-  .banner-sec h1 {
+  .banner-section h1 {
     font-size: 32px;
   }
   .title-2 {
@@ -598,16 +569,16 @@ nav,
   .results > P {
     font-size: 11px;
   }
-  .big {
+  .word {
     font-size: 28px;
   }
-  .small {
+  .word-2 {
     font-size: 10px;
   }
-  .bigg {
+  .color-change {
     font-size: 28px;
   }
-  .smalll {
+  .color-change-2 {
     font-size: 10px;
   }
 }
